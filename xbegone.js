@@ -51,11 +51,17 @@ function handlePageTitleChange(mutationsList) {
 function replacePageTitle() {
     const targetString = "/ X";
     const replacementString = "/ Twitter";
+    const tweetdecktarget = "/ XPro"
+    const tweetdeckreplacement = "/ TweetDeck"
 
     if (document.title == "X"){
         document.title = document.title.replace("X", "Twitter");
     }else if (document.title.includes(targetString)){
         document.title = document.title.replace(targetString, replacementString);
     }
-  }
-  
+     if (document.title == "XPro"){
+        document.title = document.title.replace("XPro", "TweetDeck");
+    }else if (document.title.includes(tweetdecktarget)){
+        document.title = document.title.replace(tweetdecktarget, tweetdeckreplacement);
+    }
+  } 
